@@ -1,0 +1,105 @@
+<html>
+
+<title>Div Blaster</title>
+
+<!-- JS -->
+<script src='scripts/jquery.min.js'></script>
+<script src='scripts/page.js'></script>
+
+<!-- CSS -->
+<link rel="stylesheet" type="text/css" href="style/style.css">
+
+<!-- HTML -->
+<body>
+  <div class='outer-container'>
+    <div class='game-window'>
+      <div class='splashScreen'>
+        <h1>Div Blaster</h1>
+        <h3>Created by Lee Wang</h3>
+        <p>Space : Fire a Rocket</p>
+        <p>Arrow Keys(←↑→↓): Move the Ship</p>
+        <p>Shift : Launch a Nuke</p>
+        <br>
+        <div class='shipMenu'>
+          <p id='choose'> Choose Your Ship:</p>
+          <div id='vanilla'>
+            <p> Vanilla </p>
+            <img src='img/fighter.png' height='50px'/>
+          </div>
+          <div id='spike'>
+              <p> Spiky </p>
+              <img src='img/spike.PNG' height='50px'/>
+          </div>
+          <div id='alien'>
+              <p> Alien </p>
+              <img src='img/alien.png' height='50px'/>
+          </div>
+        </div>
+        
+      <div class="shipInfo"> 
+          <h4 id='chosenHeading'> Current Ship: <span id='chosenShip'> Vanilla </span></h4>
+          <span id="bonus">+ None</span>
+          <br><br>
+          <span id="weakness">- None</span>
+      </div>
+        <button id="start" type="button">Start Div Blaster</button>
+      </div>
+
+
+      <img class = "life1" src='img/fighter.png' height='25px'/>
+      <img class="life2" src='img/fighter.png' height='25px'/>
+
+      <h4 id='nukeInstruction'> Press Shift: </h4>
+      <img src='img/nuke.png' height='25x' id = 'nuke'/>
+      <div><h4 id='nukeCooldown'> Nuke Ready in <span id="time">20</span> seconds!</h4></div>
+      <img class='nukeExplosion' src='img/nukeExplosion.png'/>
+
+      <div id='enterprise' class='ship'>
+        <img class='ship-avatar' src='img/fighter.png' height='50px'/> <!--ship img: src='http://i.stack.imgur.com/rsH6n.png'-->
+      </div>
+      <img class='explosion' src='img/explosion.png' height='50px'/>
+      <h4 id="homing"> Homing Rocket:</h4>
+      <div id="progressBar">
+        <div class="bar"></div>
+      </div>
+
+    </div>
+
+    <div class='game-over' style="display: none;">
+      <h1 id="gameOverHeader">GAME OVER!</h1>
+      <p><input type="text" placeholder="Enter Name Here" id="name"></p>
+      <button id="nameButton" type = "button">Submit Name</button>
+      <br><br><br>
+      <button id="goBack" type="button">Go Back</button>
+    </div>
+
+    <div class='status-window' style='text-align: center'>
+      <h3>Welcome!</h3>
+      <hr>
+
+      <div class="leaderboard">
+        <h4 id="topThree">Top 3 Scores: </h4>
+      </div>
+
+      <br>
+      <p>score:</p>
+
+      <h1 id='score-box'>0</h1>
+      <p>rate:</p>
+      <h1 id='rate'>0%</h1>
+
+      <button id="settingsButton" type="button">Open Setting Panel</button>
+      <div class="settingsMenu">
+        <p id="asteroid">Asteroid Spawning Rate</p>
+        <p id="numberPerSecond">(# per second)</p>
+        <p><input type="text" placeholder="Min. 0.2 Max 4" id="spawningRate"></p>
+        <div class="mute">
+          <label>Mute Audio</label><input type="checkbox" id="muteAudio" checked>
+        </div>
+        <button id="update" type="button">Update</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
